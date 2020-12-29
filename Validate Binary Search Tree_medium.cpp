@@ -33,7 +33,13 @@ public:
     
     bool isValidBST(TreeNode* root) {
         prev=NULL;
-        // return ValidBST_usinginorder(root);
+        /*
+            Approach 1.
+            return ValidBST_usinginorder(root);
+        */
+        /*
+            Approach 2.
+        */  
         return ValidBST(root, LLONG_MIN, LLONG_MAX);
     }
 };
