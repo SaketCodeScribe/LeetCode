@@ -39,3 +39,23 @@ class Solution:
             area = min(l_max[i], r_max[i]) - height[i]
             ans = ans + (area if area > 0 else 0)
         return ans
+
+
+#3. Two-pointers based solution
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        n = len(height)
+        ans = 0
+        left, right = 0, n - 1
+        l_max, r_max = 0, 0
+
+        while left < right:
+            if height[left] < height[right]:
+                l_max = max(l_max, height[left])
+                ans = ans + l_max - height[left]
+                left = left + 1
+            else:
+                r_max = max(r_max, height[right])
+                ans = ans + r_max - height[right]
+                right = right - 1
+        return ans
