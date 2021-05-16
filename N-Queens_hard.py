@@ -1,4 +1,7 @@
 class Solution:
+    def __init__(self, ans=None):
+        self.ans = []
+
     def Valid(self, queen: List[List[str]], n: int, row: int, col: int) -> bool:
         for i in range(n):
             if queen[i][col] == 'Q':
@@ -14,18 +17,19 @@ class Solution:
                 return False
         return True
 
-    def SolveNQueens(self, ans: List[List[str]], queen: List[List[str]], n: int, col: int) -> List[List[str]]:
+    def SolveNQueens(self, queen: List[List[str]], n: int, col: int) -> None:
         if col >= n:
-            ans.append(["".join(queen[i]) for i in range(n)])
-            return ans
+            self.ans.append(["".join(queen[i]) for i in range(n)])
+            return None
         for row in range(n):
             if self.Valid(queen, n, row, col):
                 queen[row][col] = 'Q'
-                self.SolveNQueens(ans, queen, n, col + 1)
+                self.SolveNQueens(queen, n, col + 1)
                 queen[row][col] = '.'
-        return ans
+        return None
 
     def solveNQueens(self, n: int) -> List[List[str]]:
-        ans, queen = [], [['.' for i in range(n)] for i in range(n)]
+        queen = [['.' for i in range(n)] for i in range(n)]
 
-        return self.SolveNQueens(ans, queen, n, 0)
+        self.SolveNQueens(queen, n, 0)
+        return self.ans
