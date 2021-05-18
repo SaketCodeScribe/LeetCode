@@ -1,4 +1,8 @@
-# 1. Stack based solution
+'''
+    1. Stack based solution
+       Time: O(n)
+       Space: O(n)
+'''
 class Solution:
     def trap(self, height: List[int]) -> int:
         n = len(height)
@@ -18,7 +22,11 @@ class Solution:
         return ans
 
 
-# 2. DP based solution
+'''
+    2. DP based solution
+       Time: O(n)
+       Space: O(n)
+'''
 class Solution:
     def trap(self, height: List[int]) -> int:
         n = len(height)
@@ -41,7 +49,11 @@ class Solution:
         return ans
 
 
-#3. Two-pointers based solution
+'''
+    3. Two-pointers based solution
+       Time: O(n)
+       Space: O(1)
+'''
 class Solution:
     def trap(self, height: List[int]) -> int:
         n = len(height)
