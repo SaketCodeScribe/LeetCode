@@ -1,4 +1,8 @@
-# 1. Using Stack
+'''
+    1. Using Stack
+       Time: O(n)
+       Space: O(n)
+'''
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
         ans = 0
@@ -19,7 +23,11 @@ class Solution:
                     de.append(i)
 
         return ans
-# 2.  Using dp
+'''
+   2.  Using dp
+       Time: O(n)
+       Space: O(n)
+'''
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
         n = len(s)
