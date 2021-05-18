@@ -1,5 +1,7 @@
-''' 1. Using Sliding Window Technique
-       Time Complexity = O(n * word_length)'''
+'''
+    1. Using Sliding Window Technique
+       Time Complexity = O(n * word_length)
+'''
 class Solution:
     def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
         n, start, end = len(words), 0, 0
@@ -39,8 +41,10 @@ class Solution:
         return ans
 
 
-''' 2. Shorter Code but higher time complexity 
-       Time Complexity = O(n * maxWidth) '''
+''' 
+    2. Shorter Code but higher time complexity 
+       Time Complexity = O(n * maxWidth) 
+'''
 
 
 class Solution:
