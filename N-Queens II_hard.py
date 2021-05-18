@@ -1,3 +1,7 @@
+'''
+    Time: O(n!)
+    Space: O(n^2)
+'''
 class Solution:
     def __init__(self, ans=None):
         self.ans = 0
