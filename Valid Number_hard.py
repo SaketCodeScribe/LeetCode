@@ -1,3 +1,7 @@
+'''
+    Time: O(n)
+    Space: O(1)
+'''
 class Solution:
     def isDecimal(self, s: str) -> bool:
         n = len(s)
