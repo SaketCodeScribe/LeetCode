@@ -1,3 +1,7 @@
+'''
+    Time: O(m*n)
+    Space: O(m*n)
+'''
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
         m, n = len(s), len(p)
