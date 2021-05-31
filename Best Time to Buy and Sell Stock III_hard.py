@@ -1,6 +1,6 @@
 '''
-    Time Colmplexity: O(kn)
-    Space Complexity: O(kn)
+    1. Time Colmplexity: O(kn)
+       Space Complexity: O(kn)
 '''
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
@@ -24,7 +24,7 @@ class Solution:
         return dp[2][n - 1][0]
 
 '''
-    More clean and elegant version of above.
+    2. More clean and elegant version of above.
 '''
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
@@ -45,27 +45,8 @@ class Solution:
         return dp[2][n - 1]
 
 '''
-    Time Complexity: O(n)
-    Space Complexity: O(1)
-'''
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        n, buy1, buy2, sell1, sell2, temp = len(prices), 999999, 999999, 0, 0, 0
-        
-        for i in range(n):
-            buy1 = min(buy1, prices[i])
-            sell1 = max(prices[i] - buy1, sell1)
-            buy2 = min(buy2, prices[i] - temp)
-            sell2 = max(prices[i] - buy2, sell2)
-            temp = sell1
-        return sell2
-
-'''
-    In the above code(3) the purpose of temp is to consider that buying 
-    and selling happens on different days but if buying 2nd time and selling 
-    1st time happens on same day then for 2nd transaction it may happen that 
-    by selling it again on the same day we encounter max profit i.e we are 
-    saying by only 1 transaction we can encounter max profit.
+    3. Time Complexity: O(n)
+       Space Complexity: O(1)
 '''
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
