@@ -1,3 +1,7 @@
+'''
+    Time Complexity: O(mlogm + nlogn)
+    Space Complexity: O(1)
+'''
 class Solution:
     def maxArea(self, h: int, w: int, horizontalCuts: List[int], verticalCuts: List[int]) -> int:
         m, n, l, b = len(horizontalCuts), len(verticalCuts), 0, 0
