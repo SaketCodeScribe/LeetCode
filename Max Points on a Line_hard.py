@@ -9,8 +9,7 @@ class Solution:
         return self.findgcd(b, a % b)
 
     def maxPoints(self, points: List[List[int]]) -> int:
-        n, ans = len(points), 0
-        dic = Counter()
+        n, ans, dic = len(points), 1, Counter()
 
         for i in range(n):
             dic = Counter()
@@ -20,5 +19,5 @@ class Solution:
                 gcd = self.findgcd(abs(a), abs(b))
                 slope = (sign * abs(a) // gcd, abs(b) // gcd)
                 dic[slope] += 1
-                ans = max(ans, dic[slope])
-        return ans + 1
+                ans = max(ans, dic[slope] + 1)
+        return ans
