@@ -1,3 +1,7 @@
+'''
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+'''
 class Solution:
     def maximumGap(self, nums: List[int]) -> int:
         ans, n, mi, mx = 0, len(nums), min(nums), max(nums)
