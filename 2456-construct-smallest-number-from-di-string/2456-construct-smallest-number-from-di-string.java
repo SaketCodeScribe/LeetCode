@@ -13,17 +13,19 @@ class Solution {
 	        			ans[i++] = (char) ((temp--)+'0');
         		}
         		start++;
-						ans[i++] = (char) (start+'0');
-						cnt = 0;
+    			ans[i++] = (char) (start+'0');
+    			cnt = 0;
         	}
-        	else 
+        	else {
         		cnt++;
+        	}
+        	
         }
         if (cnt > 0) {
 	        int temp = start = start+cnt;
 	        i--;
-					while(cnt-- >= 0) 
-						ans[i++] = (char) ((temp--)+'0');
+		while(cnt-- >= 0) 
+			ans[i++] = (char) ((temp--)+'0');
         }
         return new String(ans);
     }
