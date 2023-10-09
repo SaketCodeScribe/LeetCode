@@ -1,0 +1,1 @@
+<h2><a href="https://www.codingninjas.com/studio/problems/painter-s-partition-problem_1089557">2514.  painter-partition-problem
