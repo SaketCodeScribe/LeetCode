@@ -1,17 +1,19 @@
 class Solution {
     public int trap(int[] arr) {
-        int i=0, n = arr.length;
-        long ht, ans = 0;
-        Stack<Integer> stack = new Stack();
-        
-        while (i<n) {
-            while (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
-                ht = arr[stack.pop()];
-                if (!stack.isEmpty())
-                    ans += (Math.min(arr[stack.peek()], arr[i])-ht)*(i-stack.peek()-1);
+        int left = 0, right = arr.length-1;
+        long ans = 0, lmax = arr[left], rmax = arr[right];
+
+        while (left <= right){
+            if (arr[left] <= arr[right]){
+                lmax = Math.max(lmax, arr[left]);
+                ans += lmax-(long)arr[left++];
             }
-            stack.add(i++);
+            else{
+                rmax = Math.max(rmax, arr[right]);
+                ans += rmax-(long)arr[right--];
+            }
         }
-        return (int)ans; 
+        
+        return (int)ans;
     }
 }
