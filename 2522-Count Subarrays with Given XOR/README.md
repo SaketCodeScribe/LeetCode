@@ -1,0 +1,1 @@
+<h2><a href="https://www.codingninjas.com/studio/problems/count-subarrays-with-given-xor_1115652">2522-Count Subarrays with Given XOR

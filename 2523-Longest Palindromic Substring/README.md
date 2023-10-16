@@ -1,0 +1,1 @@
+<h2><a href="httpswww.codingninjas.comstudioproblemslongest-palindromic-substring_758900">2523. Longest Palindromic Substring
