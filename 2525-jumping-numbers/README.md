@@ -1,0 +1,1 @@
+<h2><a href="https://www.codingninjas.com/studio/problems/jumping-numbers_1069220">2525-jumping-numbers
