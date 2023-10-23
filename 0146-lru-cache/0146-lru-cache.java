@@ -35,12 +35,6 @@ class LRUCache {
         curr.next = head;
         head.prev = curr;
         head = curr;
-        // Node temp = head;
-        // while (temp != null){
-        //     System.out.print(temp.key+" ");
-        //     temp = temp.next;
-        // }
-        // System.out.println();
         return head.val;
     }
     
@@ -73,12 +67,5 @@ class LRUCache {
         	get(key);
         	head.val = value;
         }
-        // Node temp = head;
-        // System.out.println("put");
-        // while (temp != null){
-        //     System.out.print(temp.key+" ");
-        //     temp = temp.next;
-        // }
-        // System.out.println();
     }
 }
