@@ -1,0 +1,1 @@
+<h2><a href="https://practice.geeksforgeeks.org/problems/stickler-theif-1587115621/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=stickler-theif">25258-stickler-thief
