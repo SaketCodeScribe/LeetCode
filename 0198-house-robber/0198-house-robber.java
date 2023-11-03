@@ -5,7 +5,7 @@ class Solution {
         
         for(i=1; i<n; i++){
             curr = Math.max(pprev+arr[i], prev);
-            pprev = Math.max(prev, pprev);
+            pprev = prev;
             prev = curr;
         }
         return prev;
