@@ -1,0 +1,1 @@
+<h2><a href="https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article">25262-Egg Dropping Puzzle with n eggs and k floors
