@@ -1,0 +1,1 @@
+<h2><a href="https://www.codingninjas.com/studio/problems/partitions-with-given-difference_3751628?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM">25263-Partitions With Given Difference
