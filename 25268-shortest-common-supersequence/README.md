@@ -1,0 +1,1 @@
+<h2><a href="https://leetcode.com/problems/shortest-common-supersequence/description/https://leetcode.com/problems/shortest-common-supersequence/description/">25268-shortest-common-supersequence
