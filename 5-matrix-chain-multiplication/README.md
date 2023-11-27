@@ -1,0 +1,1 @@
+<h2><a href="https://www.codingninjas.com/studio/problems/matrix-chain-multiplication_624880?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=1&leftPanelTabValue=PROBLEM">5-matrix-chain-multiplication
