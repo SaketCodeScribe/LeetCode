@@ -1,0 +1,1 @@
+<h2><a href="https://leetcode.com/problems/minimum-cost-to-cut-a-stick/">6-minimum-cost-to-cut-a-stick
