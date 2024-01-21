@@ -36,34 +36,53 @@ public class Main{
 class SortByWt implements Comparator<int[]>{
     @Override
     public int compare(int[] a, int[] b){
-        return a[0]-b[0];
+        return a[2]-b[2];
     }
 }
 
 class Solution{
-	static int spanningTree(int V, int E, int edges[][]){
-	    int i, ans = 0;
-	    List<List<int[]>> adj = new ArrayList<List<int[]>>();
-	    PriorityQueue<int[]> pq = new PriorityQueue<int[]>(new SortByWt());
-	    boolean[] vis = new boolean[V];
+    static int ans;
+    static int[] par, size;
+    static int spanningTree(int V, int E, int edges[][]){
+	    int i;
+	    ans = 0;
+	    size = new int[V];
+	    par = new int[V];
 	    
-	    for(i=0; i<V; i++)
-	        adj.add(new ArrayList<int[]>());
-	    for(i=0; i<E; i++){
-	        adj.get(edges[i][0]).add(new int[]{edges[i][1], edges[i][2]});
-	        adj.get(edges[i][1]).add(new int[]{edges[i][0], edges[i][2]});
+	    for(i=0; i<V; i++){
+	        par[i] = i;
+	        size[i] = 1;
 	    }
-	    pq.add(new int[]{0,0,-1});
+	    Arrays.sort(edges, new SortByWt());
 	    
-	    while (!pq.isEmpty()){
-	        int[] vertex = pq.poll();
-	        if (vis[vertex[1]])
-	            continue;
-	           ans += vertex[0];
-	        for(int[] child:adj.get(vertex[1]))
-	            pq.add(new int[]{child[1], child[0], vertex[1]});
-	           vis[vertex[1]] = true;
-	    }
+	    for(i=0; i<E; i++)
+	        union(edges[i][0], edges[i][1], edges[i][2]);
 	    return ans;
+	}
+	
+	static void union(int a, int b, int wt){
+	    int parA, parB, sizeA, sizeB;
+	    parA = findPar(a);
+	    parB = findPar(b);
+	    sizeA = size[parA];
+	    sizeB = size[parB];
+	    
+	    if (parA == parB)
+	        return;
+	    ans += wt;
+	    if (sizeA < sizeB){
+	        par[parA] = parB;
+	        sizeB += sizeA;
+	    }
+	    else{
+	        par[parB] = parA;
+	        sizeA += sizeB;
+	    }
+	}
+	
+	static int findPar(int a){
+	    if (a == par[a])
+	        return a;
+	    return par[a] = findPar(par[a]);
 	}
 }
